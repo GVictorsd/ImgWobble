@@ -1,0 +1,5 @@
+
+psimg1.jpg - 
+psimg2.jpg - 
+psimg3.jpg - 3, 2, 0.1, 0.1, 1
+psimg4.jpg - 3, 1.8, 0.25, 0.25, 1

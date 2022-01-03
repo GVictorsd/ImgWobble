@@ -70,6 +70,8 @@ def HE(inimage, W=3, a=1, b=1, c=1, k=1):
                 mul2 = ( image[i][j] - (c*ml) ) + ( ml**a )
                 # and store in the result image
                 res[i, j, dim] = (mul1*mul2)//255
+                if res[i, j, dim] > 255:
+                    res[i, j, dim] = 255
                 # resindex += 1
     
     # reshape the array into input image dimension and return

@@ -1,3 +1,2 @@
-*.jpg
-*.png
 __pycache__/*
+enhance/src/__pycache__/

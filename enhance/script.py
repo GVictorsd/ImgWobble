@@ -1,12 +1,12 @@
 from numpy.lib.function_base import copy
 
 # include helper functions from the inclib.py file
-from inclib import *
+from src.inclib import *
 
 
 def main():
     # read input image data
-    img = image.imread('img1.jpg')
+    img = image.imread('imgcrop.jpg')
 
     # plot pixel distribution density
 
@@ -28,8 +28,15 @@ def main():
     # plt.savefig('saved.png', dpi=300, bbox_inches='tight')
 
     # transImg1 = HE(img, 3, 1.2, 0.25, 0.25, 10)
-    transImg1 = HE(img, 3, 1, 0.25, 0.25, 10)
-    plt.imshow(transImg1, cmap='binary')
+    transImg1 = HE(img, 3, 1.2, 0.5, 0.5, 10)
+    # transImg1 = HE(img, 5, 1.4, 0.1, 0.1, 10)
+
+
+  #  transImg1 = HE(img, 3, 1.8, 0.25, 0.25, 1)
+#    plt.imshow(transImg1)
+    plotDistribution(transImg1[:,:,0])
+    plotDistribution(transImg1[:,:,1])
+    plotDistribution(transImg1[:,:,2])
     plt.show()
     # plot the image
     # plt.imshow(transImg1)
@@ -40,9 +47,11 @@ def main():
     # plt.imshow(img[:,:,:], cmap='binary')
     # plt.show()
 
-    # plotDistribution(img[:, :, 0])
+#    plotDistribution(img[:, :, 0])
+ #   plotDistribution(img[:, :, 1])
+  #  plotDistribution(img[:, :, 2])
     # plotDistribution(transImg)
-    # plt.show()
+  #  plt.show()
 
 if __name__ == '__main__':
     main()
